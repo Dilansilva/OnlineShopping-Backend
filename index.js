@@ -8,6 +8,7 @@ app.post('/login',async(req,res) => {
     try {
         console.log(req.body);
         res.send("Hello World!");
+        console.log("Sample Commit");
     } catch (e) {
         console.log(e);
     }
