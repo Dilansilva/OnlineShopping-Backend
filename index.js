@@ -1,14 +1,25 @@
 const express = require('express');
 const app = express();
+var cors = require('cors');
+
+app.use(cors());
 app.use(express.json());
 
 const port = 4000;
 
-app.post('/login',async(req,res) => {
+app.post('/login' , async(req,res) => {//route for login Page
     try {
-        console.log(req.body);
-        res.send("Hello World!");
-        console.log("Sample Commit");
+        console.log(req.body);  
+        res.send('njn');
+    } catch (e) {
+        console.log(e);
+    }
+});
+
+app.get('/enterEmail', async(req,res) => {
+    try {
+        console.log('Workde!');
+        res.send('Hello World!');
     } catch (e) {
         console.log(e);
     }
