@@ -10,16 +10,20 @@ const port = 4000;
 app.post('/login' , async(req,res) => {//route for login Page
     try {
         console.log(req.body);  
-        res.send('njn');
+        const msg = 'sds';
+       
+        if(msg == "Valid"){
+            res.send({Valid:'Loggedin'});
+        }
     } catch (e) {
         console.log(e);
     }
 });
 
-app.get('/enterEmail', async(req,res) => {
+app.get('/enterEmail', async(req,res) => {//route for Enter Email Page
     try {
         console.log('Workde!');
-        res.send('Hello World!');
+        
     } catch (e) {
         console.log(e);
     }
